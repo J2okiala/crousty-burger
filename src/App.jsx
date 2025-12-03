@@ -5,9 +5,16 @@ import { useState } from "react";
 function App() {
 
   const [prenom, setPrenom] = useState("");
+  const [error, setError] = useState("");
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (prenom.trim() === "") {
+    setError("Please fill in this field");
+    return;
+    }
+    setError("");
     alert(`Bonjour ${prenom}`);
     setPrenom("");
   };
@@ -24,6 +31,7 @@ function App() {
         placeholder="Entrez votre prénom..."
         className="border p-2 rounded-xl"
       />
+      {error && <span className="text-red-600 text-sm">{error}</span>}
       <button
         type="submit"
         className="p-3 rounded-xl shadow font-semibold hover:opacity-90"
