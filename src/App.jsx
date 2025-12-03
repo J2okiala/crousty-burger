@@ -1,14 +1,25 @@
 import './App.css'
+import { useState } from "react";
+
 
 function App() {
+
+  const [prenom, setPrenom] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setPrenom("");
+  };
 
   return (
     <div>
       <h1>Bienvenue chez nous !</h1>
       <p>Connectez-vous</p>
-      <form className="flex flex-col gap-3 w-full max-w-sm">
+      <form onSubmit={handleSubmit} className="flex flex-col gap-3 w-full max-w-sm">
       <input
         type="text"
+        value={prenom}
+        onChange={(e) => setPrenom(e.target.value)}
         placeholder="Entrez votre prénom..."
         className="border p-2 rounded-xl"
       />
