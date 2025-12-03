@@ -8,6 +8,7 @@ function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    alert(`Bonjour ${prenom}`);
     setPrenom("");
   };
 
