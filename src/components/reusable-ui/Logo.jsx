@@ -1,13 +1,15 @@
-import styled from "styled-components"
-
-const LogoStyled = styled.div`border: 3px solid blue; margin: 50px`
+import "./Logo.css";
 
 export default function Logo() {
     return (
-        <LogoStyled>
-            <h2>Logo</h2>
-        </LogoStyled>
-            
-
-    )
+        <div className="LogoStyled">
+            <h1 className="logoText left">CROUSTY</h1>
+            <img
+                src="/images/F03 logo-orange.png"
+                alt="logo crousty"
+                className="logoImage"
+            />
+            <h1 className="logoText right">BURGER</h1>
+        </div>
+    );
 }

@@ -1,0 +1,86 @@
+/* ----- Conteneur ----- */
+.LogoStyled {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 8px 16px;
+    flex-wrap: nowrap;
+}
+
+/* ----- Texte (CROUSTY / BURGER) ----- */
+.logoText {
+    color: #ffa01b;
+    font-family: "Amatic SC", cursive;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    line-height: 1;
+    margin: 0;
+    white-space: nowrap;
+    text-align: center;
+}
+
+/* Desktop */
+.logoText {
+    font-size: 40px;
+}
+
+/* ----- Image centrale ----- */
+.logoImage {
+    width: 72px;
+    height: 72px;
+    object-fit: contain;
+    display: block;
+}
+
+/* ----- Tablette ----- */
+@media (max-width: 1024px) {
+    .logoText {
+        font-size: 34px;
+    }
+    .logoImage {
+        width: 64px;
+        height: 64px;
+    }
+}
+
+/* ----- Mobile ----- */
+@media (max-width: 480px) {
+    .LogoStyled {
+        gap: 6px;
+        padding: 4px 8px;
+    }
+
+    .logoText {
+        font-size: 26px;   /* ↓ réduit mais visible */
+    }
+
+    .logoImage {
+        width: 46px;
+        height: 46px;
+    }
+}
+
+/* ----- Très petits écrans (type iPhone SE) ----- */
+@media (max-width: 360px) {
+    .logoText {
+        font-size: 22px;
+    }
+    .logoImage {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* ----- Très grands écrans ----- */
+@media (min-width: 1600px) {
+    .logoText {
+        font-size: 56px;
+    }
+    .logoImage {
+        width: 96px;
+        height: 96px;
+    }
+}
