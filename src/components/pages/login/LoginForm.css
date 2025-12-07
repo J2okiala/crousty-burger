@@ -1,0 +1,113 @@
+/* ------ Structure générale ------ */
+
+.LoginFormStyled {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.title {
+    color: white;
+    font-size: 36px;
+    font-family: "Amatic SC", cursive;
+}
+
+.separator {
+    width: 150px;
+    height: 4px;
+    background-color: #ffa01b;
+    margin: 10px 0 20px;
+}
+
+.subtitle {
+    color: white;
+    font-size: 26px;
+    margin-bottom: 20px;
+    font-family: "Amatic SC", cursive;
+}
+
+.formContent {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 350px;
+}
+
+/* ------ Input avec icône ------ */
+
+.inputWrapper {
+    position: relative;
+    width: 100%;
+}
+
+.inputWrapper input {
+    width: 100%;
+    padding: 15px 15px 15px 45px; /* espace pour icône */
+    border-radius: 12px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+
+.inputIcon {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    font-size: 22px;
+    color: gray;
+}
+
+/* ------ Bouton ------ */
+
+button {
+    padding: 15px;
+    background-color: #ffa01b;
+    border: none;
+    border-radius: 12px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+/* ------ RESPONSIVE ------ */
+
+/* 📱 Mobile (small) */
+@media (max-width: 480px) {
+    .title {
+        font-size: 28px;
+    }
+    .subtitle {
+        font-size: 20px;
+    }
+    .formContent {
+        width: 90%;
+    }
+    button {
+        font-size: 16px;
+    }
+}
+
+/* 📱 Tablette */
+@media (min-width: 481px) and (max-width: 1024px) {
+    .title {
+        font-size: 34px;
+    }
+    .formContent {
+        width: 400px;
+    }
+}
+
+/* 💻 Desktop large */
+@media (min-width: 1025px) {
+    .formContent {
+        width: 380px;
+    }
+}

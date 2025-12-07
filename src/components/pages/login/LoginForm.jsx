@@ -1,41 +1,41 @@
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-
+import { useNavigate } from "react-router-dom";
+import { FaCircleUser } from "react-icons/fa6";
+import "./LoginForm.css";
 
 export default function LoginForm() {
 
-    // state
-    const [prenom, setPrenom] = useState("")
-    const navigate = useNavigate()
+    const [prenom, setPrenom] = useState("");
+    const navigate = useNavigate();
 
-    // comportement
     const handleSubmit = (e) => {
         e.preventDefault();
-        // alert(`Bonjour ${prenom}`);
-        setPrenom("")
-        navigate(`/order/${prenom}`)
+        navigate(`/order/${prenom}`);
+        setPrenom("");
     };
 
-    const handleChange = (event) => {
-        setPrenom(event.target.value)
-    }
-
-    // affichage (render)
     return (
-        <form action="submit" onSubmit={handleSubmit} className="flex flex-col gap-3 w-full max-w-sm">
-                    <h1>Bienvenue chez nous !</h1>
-                    <h2>Connectez-vous</h2>
+        <div className="LoginFormStyled">
+            <h1 className="title">Bienvenue chez nous !</h1>
+            <div className="separator"></div>
+            <h2 className="subtitle">Connectez-vous</h2>
+
+            <form onSubmit={handleSubmit} className="formContent">
+                <div className="inputWrapper">
+                    <FaCircleUser className="inputIcon" />
                     <input
                         type="text"
                         value={prenom}
-                        onChange={handleChange}
-                        placeholder="Entrez votre prénom..." 
+                        onChange={(e) => setPrenom(e.target.value)}
+                        placeholder="Entrez votre prénom..."
                         required
-                        className="border p-2 rounded-xl"
                     />
-                    <button className="p-3 rounded-xl shadow font-semibold hover:opacity-90">
-                        Accéder à votre espace
-                    </button>
-                </form>
-    )
+                </div>
+
+                <button type="submit">
+                    Accéder à mon espace →
+                </button>
+            </form>
+        </div>
+    );
 }
