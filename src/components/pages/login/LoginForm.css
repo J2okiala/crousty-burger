@@ -62,6 +62,7 @@
 /* ------ Bouton ------ */
 
 button {
+    width: 100%;
     padding: 15px;
     background-color: #ffa01b;
     border: none;
