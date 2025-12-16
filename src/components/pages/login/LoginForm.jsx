@@ -17,7 +17,8 @@ export default function LoginForm() {
     };
 
     return (
-        <form action="submit" onSubmit={handleSubmit} className="formContent">
+        <div className="LoginFormStyled">
+            <form action="submit" onSubmit={handleSubmit} className="formContent">
             <h1 className="title">Bienvenue chez nous !</h1>
             <div className="separator"></div>
             <h2 className="subtitle">Connectez-vous</h2>
@@ -34,5 +35,8 @@ export default function LoginForm() {
                 Accéder à votre espace
             </Button>
         </form>
+
+        </div>
+        
     );
 }
